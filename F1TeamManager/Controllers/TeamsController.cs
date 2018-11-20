@@ -72,5 +72,5 @@ namespace F1TeamManager.Controllers
 
             return RedirectToAction("Index");
         } 
-     }
+    }
 }
