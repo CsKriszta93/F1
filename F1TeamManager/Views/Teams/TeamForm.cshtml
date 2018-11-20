@@ -1,0 +1,51 @@
+﻿@model F1TeamManager.ViewModels.TeamViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>@Model.Title</title>
+</head>
+<body>
+    <h2>@Model.Title</h2>
+    <div class="container">
+        @using (Html.BeginForm("Save", "Teams"))
+        {
+            @Html.ValidationSummary(true, "Please correct the following errors.")
+            <div class="row">
+                <div class="form-group col-xs-3">
+                    @Html.LabelFor(t => t.Name)
+                    @Html.TextBoxFor(t => t.Name, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(t => t.Name)
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-3">
+                    @Html.LabelFor(t => t.Founded)
+                    @Html.TextBoxFor(t => t.Founded, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(t => t.Founded)
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-xs-3">
+                    @Html.LabelFor(t => t.WorldChampionshipsWon)
+                    @Html.TextBoxFor(t => t.WorldChampionshipsWon, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(t => t.WorldChampionshipsWon)
+                </div>
+            </div>
+            <div class="checkbox">
+                <label>
+                    @Html.CheckBoxFor(t => t.IsPaidForMembership) Membership Fee Paid
+                </label>
+            </div>
+            @Html.HiddenFor(t => t.Id);
+            <button class="btn btn-primary" type="submit">Save</button>
+            @Html.AntiForgeryToken();
+        }
+    </div>
+</body>
+</html>
+
