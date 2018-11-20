@@ -68,6 +68,11 @@ namespace F1TeamManager.Controllers
         [HttpPost]
         public ActionResult Delete(int id)
         {
+            var teamToDelete = teamRepository.GetTeamById(id);
+
+            if (teamToDelete == null)
+                return HttpNotFound();
+
             teamRepository.RemoveTeam(id);
 
             return RedirectToAction("Index");
