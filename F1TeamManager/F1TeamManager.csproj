@@ -227,6 +227,10 @@
     <Compile Include="Migrations\201811201117089_UserNameAddedToIdentity.Designer.cs">
       <DependentUpon>201811201117089_UserNameAddedToIdentity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201811201529137_TeamPropertiesRequired.cs" />
+    <Compile Include="Migrations\201811201529137_TeamPropertiesRequired.Designer.cs">
+      <DependentUpon>201811201529137_TeamPropertiesRequired.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -368,6 +372,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201811201117089_UserNameAddedToIdentity.resx">
       <DependentUpon>201811201117089_UserNameAddedToIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201811201529137_TeamPropertiesRequired.resx">
+      <DependentUpon>201811201529137_TeamPropertiesRequired.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
