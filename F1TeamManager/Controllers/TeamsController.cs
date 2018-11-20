@@ -1,5 +1,4 @@
-﻿using F1TeamManager.Models;
-using F1TeamManager.Repositories;
+﻿using F1TeamManager.Repositories;
 using F1TeamManager.ViewModels;
 using System.Web.Mvc;
 

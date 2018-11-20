@@ -1,6 +1,4 @@
-﻿using AutoMapper;
-using F1TeamManager.Models;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace F1TeamManager.ViewModels
 {
